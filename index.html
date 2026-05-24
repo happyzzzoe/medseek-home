@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedSeek.Ai 医生专属大模型</title>
+    <link rel="icon" href="./assets/medseek-mascot.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="MedSeek.Ai">
+        <img src="./assets/medseek-mascot.png" alt="" />
+        <span>MedSeek.Ai</span>
+      </a>
+      <nav class="nav-actions" aria-label="产品导航">
+        <a href="#download">下载桌面端</a>
+        <a href="#">打开网页端</a>
+        <a href="#app">了解 MedSeek APP</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero reveal">
+        <div class="hero-top">
+          <div class="hero-copy">
+            <h1>
+              <span>MedSeek.Ai 医生专属大模型，</span>
+              <strong>让临床与科研进入 AI 时代</strong>
+            </h1>
+            <p class="lead">
+              <span class="lead-product">MedSeek Cowork</span> 是面向医学科研场景的桌面级 AI 助手，融合权威医学知识库、专业证据与大模型推理能力，帮助医生更系统地推进医学科研工作。
+            </p>
+            <div class="hero-actions" id="download">
+              <a class="button primary" href="#">下载 Windows 版</a>
+              <a class="button secondary" href="#">下载 macOS 版</a>
+            </div>
+          </div>
+
+          <div class="hero-image-slot" aria-label="MedSeek 小鸟医学科研场景图">
+            <img src="./assets/medseek-bird-research-hero-transparent.png" alt="MedSeek 小鸟医学科研 AI 场景图" />
+          </div>
+        </div>
+
+        <div class="showcase-shell">
+          <div class="product-frame" aria-label="MedSeek Cowork 产品界面">
+            <img src="./assets/medseek-cowork-reference.png" alt="MedSeek Cowork 桌面端产品界面" />
+          </div>
+        </div>
+      </section>
+
+      <section class="paper-proof research-hero reveal">
+        <a class="paper-preview" href="https://ai.jmir.org/2026/1/e77988" target="_blank" rel="noreferrer" aria-label="查看 JMIR AI 论文">
+          <div class="paper-preview-top">
+            <span>JMIR AI</span>
+            <strong>Published Research</strong>
+          </div>
+          <img src="./assets/jmir-paper-screenshot.png" alt="JMIR AI 论文页面截图" />
+        </a>
+        <div class="research-copy">
+          <h2>大模型研究成果</h2>
+          <p>
+            良医汇 MedSeek 团队联合智谱 AI 及多家三甲医院资深医生，基于国产 32B 模型 GLM-4-Air，提出融合医学逻辑的 Medical-based Harness Engineering 与选择性监督微调框架，在非小细胞肺癌 TNM 分期自动判断任务中实现优于通用大模型的表现。
+          </p>
+          <p>
+            相关成果发表于国际医学信息学期刊 JMIR AI，标志着 MedSeek.Ai 在“医学 AI 工程化”方向上，形成了具有差异化价值的技术路径，也为基层医疗机构提供了更具可及性、安全性与成本效益的 AI 方案。
+          </p>
+          <div class="research-tags" aria-label="研究标签">
+            <span>NSCLC TNM</span>
+            <span>Harness Engineering</span>
+            <span>Supervised fine-tuning (SFT)</span>
+          </div>
+          <a class="button primary" href="https://ai.jmir.org/2026/1/e77988" target="_blank" rel="noreferrer">查看成果</a>
+        </div>
+      </section>
+
+      <section id="app" class="ecosystem reveal">
+        <div class="section-head">
+          <h2>产品矩阵：覆盖医生所有使用场景</h2>
+        </div>
+        <div class="eco-grid">
+          <article class="product-entry">
+            <span class="product-number">01</span>
+            <h3>MedSeek APP</h3>
+            <strong>临床一线的随身 AI 助手</strong>
+            <p>鉴别诊断、治疗方案、用药咨询，随时提问，快速获得循证参考。</p>
+            <button class="product-action qr-trigger" type="button" aria-controls="app-qr-modal">查看下载二维码</button>
+          </article>
+          <article class="product-entry">
+            <span class="product-number">02</span>
+            <h3>MedSeek PC网页端</h3>
+            <strong>轻量、快速、无需安装</strong>
+            <p>适合在电脑上继续整理临床问题、文献资料和科研想法。</p>
+            <a class="product-action" href="https://medseek.ai" target="_blank" rel="noreferrer">打开 MedSeek.Ai</a>
+          </article>
+          <article class="product-entry">
+            <span class="product-number">03</span>
+            <h3>MedSeek Cowork</h3>
+            <strong>本地化部署，安全可信，数据不出端</strong>
+            <p>科研查新、综述框架、SCI 润色、论文写作，只需一次对话。</p>
+            <a class="product-action" href="#download">下载桌面端</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="qr-modal" id="app-qr-modal" aria-hidden="true">
+      <button class="qr-backdrop" type="button" aria-label="关闭二维码弹窗"></button>
+      <div class="qr-panel" role="dialog" aria-modal="true" aria-labelledby="qr-title">
+        <button class="qr-close" type="button" aria-label="关闭二维码弹窗">×</button>
+        <h2 id="qr-title">MedSeek APP 下载</h2>
+        <div class="qr-code" aria-label="MedSeek APP 下载二维码占位"></div>
+        <p>扫码下载 MedSeek APP，临床问题随时提问。</p>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

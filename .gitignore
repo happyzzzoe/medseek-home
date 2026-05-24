@@ -1,0 +1,14 @@
+.DS_Store
+
+# Local browser automation output
+.playwright-cli/
+
+# Common dependency/build output
+node_modules/
+dist/
+build/
+
+# Environment and local-only files
+.env
+.env.*
+*.log
