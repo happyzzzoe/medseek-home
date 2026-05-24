@@ -144,23 +144,18 @@ p {
 }
 
 h1 {
-  font-size: clamp(42px, 5vw, 72px);
-  line-height: 1.08;
+  font-size: clamp(38px, 4.25vw, 60px);
+  line-height: 1.12;
   letter-spacing: 0;
 }
 
-h1 span,
-h1 strong {
+h1 span {
   display: block;
   color: transparent;
   background: linear-gradient(90deg, #073aa4 0%, #1463ff 52%, #12bfd0 100%);
   background-clip: text;
   -webkit-background-clip: text;
   font-weight: 950;
-}
-
-h1 strong {
-  margin-top: 4px;
 }
 
 .lead {
@@ -174,6 +169,32 @@ h1 strong {
 .lead-product {
   color: var(--blue);
   font-weight: 950;
+}
+
+.trust-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-top: 18px;
+  color: #304462;
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.trust-line span {
+  position: relative;
+  padding-left: 14px;
+}
+
+.trust-line span::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: var(--blue);
+  content: "·";
+  font-size: 22px;
+  line-height: 1;
+  transform: translateY(-52%);
 }
 
 .hero-actions {
@@ -223,9 +244,8 @@ h1 strong {
   width: min(132%, 720px);
   max-width: none;
   height: auto;
-  mix-blend-mode: multiply;
   filter: drop-shadow(0 26px 52px rgba(17, 53, 115, 0.14));
-  transform: translateX(8%);
+  transform: translateX(-7%);
   animation: heroArtFloat 7s ease-in-out infinite;
 }
 
@@ -359,8 +379,13 @@ h1 strong {
 .proof-text h2,
 .section-head h2,
 .final h2 {
-  font-size: clamp(32px, 4vw, 52px);
-  line-height: 1.15;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.18;
+}
+
+.paper-proof h2,
+.ecosystem .section-head h2 {
+  white-space: nowrap;
 }
 
 .paper-proof p,
@@ -720,10 +745,10 @@ body.modal-open {
 @keyframes heroArtFloat {
   0%,
   100% {
-    transform: translateX(8%) translateY(0);
+    transform: translateX(-7%) translateY(0);
   }
   50% {
-    transform: translateX(8%) translateY(-8px);
+    transform: translateX(-7%) translateY(-8px);
   }
 }
 
@@ -752,6 +777,10 @@ body.modal-open {
   }
 
   .hero-actions {
+    justify-content: center;
+  }
+
+  .trust-line {
     justify-content: center;
   }
 
@@ -812,11 +841,15 @@ body.modal-open {
   }
 
   h1 {
-    font-size: clamp(36px, 10vw, 48px);
+    font-size: clamp(34px, 9vw, 46px);
   }
 
   .lead {
     font-size: 17px;
+  }
+
+  .trust-line {
+    font-size: 14px;
   }
 
   .hero-image-slot {
