@@ -37,3 +37,14 @@ qrClosers.forEach((button) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") setQrModal(false);
 });
+
+const coworkDownloadTrigger = document.querySelector(".cowork-download-trigger");
+const coworkDownloadOptions = document.querySelector("#cowork-download-options");
+
+if (coworkDownloadTrigger && coworkDownloadOptions) {
+  coworkDownloadTrigger.addEventListener("click", () => {
+    const isOpen = coworkDownloadOptions.classList.toggle("is-open");
+    coworkDownloadTrigger.setAttribute("aria-expanded", String(isOpen));
+    coworkDownloadOptions.setAttribute("aria-hidden", String(!isOpen));
+  });
+}

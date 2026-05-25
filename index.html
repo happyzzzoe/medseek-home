@@ -25,19 +25,31 @@
         <div class="hero-top">
           <div class="hero-copy">
             <h1>
-              <span>MedSeek.Ai 让临床与科研进入 AI 时代</span>
+              <span>MedSeek.Ai 让临床与科研进入AI 时代</span>
+            
             </h1>
             <p class="lead">
               <span class="lead-product">MedSeek Cowork</span> 是医生专属的全能 AI 工作台，从临床到科研一站搞定，帮助医生探索更复杂、更具创造性的工作。
             </p>
             <div class="trust-line" aria-label="MedSeek Cowork 核心能力">
-              <span>数据安全·本地化部署</span>
-              <span>循证可信·来源可追溯</span>
-              <span>医学任务·深度推理</span>
+              <span class="trust-item">
+                <i aria-hidden="true"></i>
+                <strong>数据安全</strong>· 本地化部署
+              </span>
+              <b aria-hidden="true">｜</b>
+              <span class="trust-item">
+                <i aria-hidden="true"></i>
+                <strong>循证可信</strong>· 来源可追溯
+              </span>
+              <b aria-hidden="true">｜</b>
+              <span class="trust-item">
+                <i aria-hidden="true"></i>
+                <strong>医学任务</strong>· 深度推理
+              </span>
             </div>
             <div class="hero-actions" id="download">
               <a class="button primary" href="#">下载 Windows 版</a>
-              <a class="button secondary" href="#">下载 macOS 版</a>
+              <a class="button secondary" href="#">下载 MacOS 版</a>
             </div>
           </div>
 
@@ -84,26 +96,53 @@
         </div>
         <div class="eco-grid">
           <article class="product-entry">
-            <span class="product-number">01</span>
             <h3>MedSeek APP</h3>
             <strong>临床一线的随身 AI 助手</strong>
             <p>鉴别诊断、治疗方案、用药咨询，随时提问，快速获得循证参考。</p>
-            <button class="product-action qr-trigger" type="button" aria-controls="app-qr-modal">查看下载二维码</button>
+            <button class="product-action qr-trigger" type="button" aria-controls="app-qr-modal">免费下载</button>
           </article>
           <article class="product-entry">
-            <span class="product-number">02</span>
             <h3>MedSeek PC网页端</h3>
             <strong>轻量、快速、无需安装</strong>
             <p>适合在电脑上继续整理临床问题、文献资料和科研想法。</p>
             <a class="product-action" href="https://medseek.ai" target="_blank" rel="noreferrer">打开 MedSeek.Ai</a>
           </article>
           <article class="product-entry">
-            <span class="product-number">03</span>
             <h3>MedSeek Cowork</h3>
             <strong>本地化部署，安全可信，数据不出端</strong>
             <p>科研查新、综述框架、SCI 润色、论文写作，只需一次对话。</p>
-            <a class="product-action" href="#download">下载桌面端</a>
+            <button class="product-action cowork-download-trigger" type="button" aria-expanded="false" aria-controls="cowork-download-options">下载桌面端</button>
+            <div class="download-options" id="cowork-download-options" aria-hidden="true">
+              <a href="#">Windows</a>
+              <a href="#">macOS</a>
+            </div>
           </article>
+        </div>
+      </section>
+
+      <section class="closing-cta reveal">
+        <div class="closing-copy">
+          <h2>
+            <span class="closing-title-line">准备好和 <em>MedSeek.Ai</em> 一起创造更多可能了吗？</span>
+          </h2>
+          <p>体验 AI Agent 办公新范式</p>
+          <a class="closing-button" href="#top">立即体验 MedSeek Cowork</a>
+        </div>
+        <div class="closing-side">
+          <div class="closing-qrs" aria-label="MedSeek 二维码入口">
+            <article>
+              <img class="footer-qr" src="./assets/小程序二维码.jpg" alt="MedSeek 小程序二维码" />
+              <span>小程序｜快速体验</span>
+            </article>
+            <article>
+              <img class="footer-qr" src="./assets/medseek-app-download-qr.jpg" alt="MedSeek APP 下载二维码" />
+              <span>APP｜临床快问快答</span>
+            </article>
+            <article>
+              <img class="footer-qr" src="./assets/企业微信二维码-cropped.png" alt="MedSeek 企业微信二维码" />
+              <span>企业微信｜预约演示</span>
+            </article>
+          </div>
         </div>
       </section>
     </main>
@@ -113,7 +152,7 @@
       <div class="qr-panel" role="dialog" aria-modal="true" aria-labelledby="qr-title">
         <button class="qr-close" type="button" aria-label="关闭二维码弹窗">×</button>
         <h2 id="qr-title">MedSeek APP 下载</h2>
-        <div class="qr-code" aria-label="MedSeek APP 下载二维码占位"></div>
+        <img class="qr-image" src="./assets/medseek-app-download-qr.jpg" alt="MedSeek APP 下载二维码" />
         <p>扫码下载 MedSeek APP，临床问题随时提问。</p>
       </div>
     </div>
