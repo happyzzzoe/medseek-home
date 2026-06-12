@@ -672,10 +672,12 @@ h1 span {
 
 .download-options {
   position: absolute;
-  bottom: 20px;
-  left: 150px;
+  bottom: 68px;
+  left: 24px;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+  max-width: calc(100% - 48px);
   opacity: 0;
   pointer-events: none;
   transform: translateY(6px);
