@@ -105,9 +105,22 @@ a {
     transform 0.2s ease;
 }
 
-.nav-actions a:hover {
+.nav-actions a:hover,
+.nav-feedback:hover {
   color: var(--blue);
   transform: translateY(-1px);
+}
+
+.nav-feedback {
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .hero {
@@ -243,7 +256,7 @@ h1 span {
 .hero-actions {
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 14px;
+  gap: 12px;
   margin-top: 30px;
 }
 
@@ -322,6 +335,21 @@ h1 span {
   color: var(--blue-deep);
   border-color: rgba(20, 99, 255, 0.18);
   background: rgba(255, 255, 255, 0.72);
+}
+
+.download-button {
+  gap: 8px;
+  min-height: 42px;
+  padding-inline: 17px;
+  white-space: nowrap;
+}
+
+.button-icon {
+  display: block;
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  fill: currentColor;
 }
 
 .showcase-shell {
@@ -717,6 +745,13 @@ body.modal-open {
   box-shadow: 0 30px 90px rgba(5, 21, 52, 0.28);
 }
 
+.feedback-panel {
+  width: min(560px, 100%);
+  max-height: min(760px, calc(100vh - 48px));
+  overflow: auto;
+  text-align: left;
+}
+
 .qr-close {
   position: absolute;
   top: 14px;
@@ -742,6 +777,87 @@ body.modal-open {
   margin-top: 16px;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.feedback-intro {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.feedback-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.feedback-form label {
+  display: grid;
+  gap: 8px;
+  color: #243651;
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.feedback-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  border: 1px solid rgba(194, 214, 242, 0.95);
+  border-radius: 12px;
+  color: var(--ink);
+  background: rgba(247, 251, 255, 0.88);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.feedback-form input {
+  min-height: 42px;
+  padding: 0 13px;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+  min-height: 120px;
+  padding: 12px 13px;
+  line-height: 1.65;
+}
+
+.feedback-form input[type="file"] {
+  padding: 9px 13px;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: rgba(20, 99, 255, 0.56);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(20, 99, 255, 0.1);
+}
+
+.feedback-submit {
+  width: fit-content;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.feedback-status {
+  min-height: 22px;
+  margin: 0;
+  color: #0b7a5b;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .qr-image {
@@ -1079,8 +1195,7 @@ body.modal-open {
     font-size: 13px;
   }
 
-  .nav-actions a:nth-child(1),
-  .nav-actions a:nth-child(2) {
+  .nav-actions a:nth-of-type(1) {
     display: none;
   }
 
@@ -1096,6 +1211,15 @@ body.modal-open {
   .lead {
     font-size: 15px;
     line-height: 1.76;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .download-button {
+    width: 100%;
+    max-width: 280px;
   }
 
   .trust-line {
@@ -1208,6 +1332,10 @@ body.modal-open {
   .download-options {
     position: static;
     margin-top: 12px;
+  }
+
+  .feedback-fields {
+    grid-template-columns: 1fr;
   }
 }
 
