@@ -358,6 +358,38 @@ h1 span {
   padding-bottom: 70px;
 }
 
+.home-carousel {
+  position: relative;
+  width: min(1180px, 100%);
+  margin: 18px auto 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid rgba(199, 216, 239, 0.9);
+  border-radius: 34px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.home-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.home-slide.is-active {
+  opacity: 1;
+}
+
+.home-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .product-frame {
   position: relative;
   overflow: hidden;

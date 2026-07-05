@@ -88,3 +88,13 @@ if (coworkDownloadTrigger && coworkDownloadOptions) {
     coworkDownloadOptions.setAttribute("aria-hidden", String(!isOpen));
   });
 }
+
+const homeSlides = document.querySelectorAll(".home-slide");
+if (homeSlides.length > 1) {
+  let activeIndex = 0;
+  setInterval(() => {
+    homeSlides[activeIndex].classList.remove("is-active");
+    activeIndex = (activeIndex + 1) % homeSlides.length;
+    homeSlides[activeIndex].classList.add("is-active");
+  }, 2000);
+}
